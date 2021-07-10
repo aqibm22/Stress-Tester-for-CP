@@ -1,4 +1,4 @@
-# Stress-Tester-for-CP
+# Stress Tester for Competitive Programming 
 
 ## Steps - 
   1. Write your optimal/efficient solution in [optimal.cpp](https://github.com/aqibm22/Stress-Tester-for-CP/blob/main/optimal.cpp)
