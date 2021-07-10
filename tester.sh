@@ -14,24 +14,17 @@ g++ -std=c++17 brute.cpp -o brute || { echo ${bold}${orange}Compilation Error${r
 
 diff_found=0
 i=1
-#change accordingly ot the test cases you need - 
 max_tests=100
 
 while [[ $i -le $max_tests ]]
 do
-    # Generate test_case and save it in input1.txt
+    
     ./generator > input1.txt
 
-    # run original solution, take input from above generated test case i.e. from input1.txt
-    # and save it in original_output.txt
-    ./original < input1.txt > original_output.txt #|| {echo failed; exit 1;}
+    ./original < input1.txt > original_output.txt 
 
-    # run brute force solution, take input from above generated test case i.e. from input1.txt
-    # and save it in brute_output.txt
     ./brute < input1.txt > brute_output.txt
 
-    # check if files original_output and brute_output
-    # differs(we are ignoring spaces and then comparing files)
     if diff --tabsize=1 -F --label --side-by-side --ignore-space-change original_output.txt brute_output.txt > dont_show_on_terminal.txt; then
         echo "${orange}test_case #$i: ${bold}${green}passed${reset}"
     else

@@ -91,7 +91,6 @@ void generate_test() {
 }
 
 signed main() {
-    freopen("input1.txt", "w", stdout);
   srand(accuracy);
   int t = 1;
   #ifndef SINGLE_TEST
